@@ -1,5 +1,5 @@
 <template>
-    <div class="modal" v-if="isOpenWindow">
+    <div class="modal no-theme-change" v-if="isOpenWindow">
         <div class="modal-dialog">
             <div class="modal-content">
 
@@ -86,5 +86,8 @@ const displayCurrentDate = () => {
 .no-resize {
   resize: none;
 }
-
+.no-theme-change {
+    background-color: transparent;
+    color: black;
+}
 </style>

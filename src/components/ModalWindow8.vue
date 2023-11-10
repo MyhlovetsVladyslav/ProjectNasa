@@ -1,5 +1,5 @@
 <template>
-    <div v-draggable class="modal">
+    <div class="modal no-theme-change">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
 
@@ -25,7 +25,6 @@
                         <div v-for="(photo, index) in filteredData.photo" :key="index">
                             <img style="max-height: 200px; max-width: 200px;" :src="photo" alt="Post Photo" />
                         </div>
-                       <!--  Explanation: {{ filteredData.content }} -->
                        <br>
                         <textarea type="text" class="form-control no-resize" v-model="filteredData.content"  rows="8"></textarea>
                     </div>
@@ -70,5 +69,9 @@ onBeforeMount(() => {
 }
 .no-resize {
   resize: none;
+}
+.no-theme-change {
+    background-color: transparent;
+    color: black;
 }
 </style>
